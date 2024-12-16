@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ankit - Memories</title>
+    <style>
+      #imageContainer1,
+      #imageContainer2 {
+        display: none;
+        text-align: center;
+      }
+      button {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Who is Ankit?</h1>
+    <h2>We are friends from that age when we didn't have pubic hairs.</h2>
+    <h3>
+      Best friend—sometimes opinions differ, but that's a good sign! We get two
+      points of view, making error detection easier and conclusions closer to
+      the truth.
+    </h3>
+    <h4>
+      Ankit, buying a laptop to dive deeper into coding is such a fantastic step
+      for your future. It shows your dedication and foresight toward building
+      something great. On top of that, your idea of making documentary videos is
+      absolutely brilliant! It's a creative and impactful way to express
+      yourself and share meaningful stories. While the breakup may feel like a
+      tough chapter, remember, we are always here for you. This moment of pain
+      will pass, and you'll emerge stronger, more focused, and ready to conquer
+      new heights. You're truly amazing, my friend, and this new beginning in
+      coding and documentaries will lead you to incredible opportunities.
+    </h4>
+
+    <p>We have vast memories of us, like:</p>
+
+    <!-- First Clickable Image -->
+    <p id="clickableWord1" onclick="showImage(1)">Like this one</p>
+    <div id="imageContainer1">
+      <img
+        src="C:\Users\User\OneDrive\Documents\WhatsApp Image 2024.jpg"
+        alt="Example Image 1"
+        width="500"
+      />
+      <br />
+      <button onclick="goBack(1)">Oh sorry, not this one</button>
+    </div>
+
+    <!-- Second Clickable Image -->
+    <p id="clickableWord2" onclick="showImage(2)">This one is right</p>
+    <div id="imageContainer2">
+      <img
+        src="C:\Users\User\OneDrive\Documents\WhatsApp Image 2024-12-15 .jpg"
+        alt="Example Image 2"
+        width="500"
+      />
+      <br />
+      <button onclick="goBack(2)">Return</button>
+    </div>
+
+    <!-- Button to Redirect -->
+    <button onclick="redirectToAnotherPage()">
+      Click here to go to Karan's file
+    </button>
+
+    <script>
+      // Function to show an image and hide the respective word
+      function showImage(id) {
+        document.getElementById(`clickableWord${id}`).style.display = "none"; // Hide the clickable word
+        document.getElementById(`imageContainer${id}`).style.display = "block"; // Show the image container
+      }
+
+      // Function to hide the image and show the respective word
+      function goBack(id) {
+        document.getElementById(`clickableWord${id}`).style.display = "block"; // Show the clickable word
+        document.getElementById(`imageContainer${id}`).style.display = "none"; // Hide the image container
+      }
+
+      // Function to redirect to another file
+      function redirectToAnotherPage() {
+        window.location.href = "karan.html"; // Redirect to Karan's file
+      }
+    </script>
+  </body>
+</html>
