@@ -4,6 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yes We Can</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        h1, h2, p {
+            margin: 10px 0;
+        }
+
+        /* Buttons styling */
+        button {
+            margin: 10px 5px;
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Image styling */
+        img {
+            display: block;
+            margin: 20px auto;
+            border-radius: 250px;
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body>
     <h1>
@@ -15,13 +54,15 @@
     <p>
         I just decided to describe you as my small brothers, so I am giving you an overview of them.
     </p>
-    
+
     <!-- Buttons to Redirect to Different Pages -->
     <button onclick="redirectToPage('karan.html')">Click here to go to Karan's page</button>
     <button onclick="redirectToPage('ankit.html')">Click here to go to Ankit's page</button>
     <button onclick="redirectToPage('anurag.html')">Click here to go to Anurag's page</button>
     <button onclick="redirectToPage('ujwal.html')">Click here to go to Ujjwal's page</button>
-    <img src="C:\Users\User\OneDrive\Documents\WhatsApp Image 2024-12.jpg" width="500px"; height="500px"; border-radius="250px";>
+
+    <!-- Image Display -->
+    <img src="C:\Users\User\OneDrive\Documents\WhatsApp Image 2024-12.jpg" alt="Memory Image">
 
     <script>
         // Function to handle redirection
