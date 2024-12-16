@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ankit - Memories</title>
     <style>
-      #imageContainer1,
-      #imageContainer2 {
+      /* Centered images */
+      .image-container {
         display: none;
         text-align: center;
       }
+
+      /* Buttons styling */
       button {
         margin-top: 10px;
         padding: 10px;
@@ -17,9 +19,18 @@
         color: white;
         border: none;
         cursor: pointer;
+        transition: background-color 0.3s ease;
       }
+
       button:hover {
         background-color: #45a049;
+      }
+
+      /* Clickable text */
+      .clickable-text {
+        color: #0077cc;
+        cursor: pointer;
+        text-decoration: underline;
       }
     </style>
   </head>
@@ -46,11 +57,13 @@
     <p>We have vast memories of us, like:</p>
 
     <!-- First Clickable Image -->
-    <p id="clickableWord1" onclick="showImage(1)">Like this one</p>
-    <div id="imageContainer1">
+    <p class="clickable-text" id="clickableWord1" onclick="showImage(1)">
+      Like this one
+    </p>
+    <div class="image-container" id="imageContainer1">
       <img
         src="C:\Users\User\OneDrive\Documents\WhatsApp Image 2024.jpg"
-        alt="Example Image 1"
+        alt="Memory Image 1"
         width="500"
       />
       <br />
@@ -58,11 +71,13 @@
     </div>
 
     <!-- Second Clickable Image -->
-    <p id="clickableWord2" onclick="showImage(2)">This one is right</p>
-    <div id="imageContainer2">
+    <p class="clickable-text" id="clickableWord2" onclick="showImage(2)">
+      This one is right
+    </p>
+    <div class="image-container" id="imageContainer2">
       <img
         src="C:\Users\User\OneDrive\Documents\WhatsApp Image 2024-12-15 .jpg"
-        alt="Example Image 2"
+        alt="Memory Image 2"
         width="500"
       />
       <br />
@@ -70,26 +85,24 @@
     </div>
 
     <!-- Button to Redirect -->
-    <button onclick="redirectToAnotherPage()">
-      Click here to go to Karan's file
-    </button>
+    <button onclick="redirectToAnotherPage()">Click here to go to Karan's file</button>
 
     <script>
-      // Function to show an image and hide the respective word
+      // Function to show an image container and hide the clickable text
       function showImage(id) {
-        document.getElementById(`clickableWord${id}`).style.display = "none"; // Hide the clickable word
-        document.getElementById(`imageContainer${id}`).style.display = "block"; // Show the image container
+        document.getElementById(`clickableWord${id}`).style.display = "none";
+        document.getElementById(`imageContainer${id}`).style.display = "block";
       }
 
-      // Function to hide the image and show the respective word
+      // Function to hide the image container and show the clickable text
       function goBack(id) {
-        document.getElementById(`clickableWord${id}`).style.display = "block"; // Show the clickable word
-        document.getElementById(`imageContainer${id}`).style.display = "none"; // Hide the image container
+        document.getElementById(`clickableWord${id}`).style.display = "block";
+        document.getElementById(`imageContainer${id}`).style.display = "none";
       }
 
       // Function to redirect to another file
       function redirectToAnotherPage() {
-        window.location.href = "karan.html"; // Redirect to Karan's file
+        window.location.href = "karan.html";
       }
     </script>
   </body>
